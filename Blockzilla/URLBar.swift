@@ -6,6 +6,7 @@ import Foundation
 import AutocompleteTextField
 import SnapKit
 import Telemetry
+import CaptainPlanet
 
 protocol URLBarDelegate: class {
     func urlBar(_ urlBar: URLBar, didEnterText text: String)
@@ -274,7 +275,8 @@ class URLBar: UIView {
         urlText.autocompleteDelegate = self
         urlText.completionSource = domainCompletion
         urlText.accessibilityIdentifier = "URLBar.urlText"
-        urlText.placeholder = UIConstants.strings.urlTextPlaceholder
+        // urlText.placeholder = UIConstants.strings.urlTextPlaceholder
+        urlText.placeholder = SomeIntegration().getValue()
         textAndLockContainer.addSubview(urlText)
 
         progressBar.isHidden = true

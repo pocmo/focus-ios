@@ -47,3 +47,8 @@ export-locales-env
 # Glean
 .venv/
 Blockzilla/Generated
+
+# Kotlin Multiplatform / Gradle
+local.properties
+.gradle/
+
